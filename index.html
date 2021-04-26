@@ -22,8 +22,8 @@
 
     <!-- Primary Meta Tags -->
     <title>Covid-19-HelpDesk || UCC&DA || JC Bose University</title>
-    <meta name="title" content="Audition | Career and Counseling Cell, JC Bose University ">
-    <meta name="description" content="Career and Counseling helps student to achieve excellence in their respective fields and oraganizes seminars in JC BOSE University, YMCA, Faridabad">
+    <meta name="title" content="Covid-19-HelpDesk || UCC&DA || JC Bose University">
+    <!-- <meta name="description" content="Career and Counseling helps student to achieve excellence in their respective fields and oraganizes seminars in JC BOSE University, YMCA, Faridabad"> -->
 
 
 
@@ -212,16 +212,17 @@ The service here is free of cost without any kind of fees.
                                     <option  id="city_option" value="Gurugram">Gurugram</option>
                                     <option  id="city_option" value="Faridabad">Faridabad</option>
                                     <option  id="city_option" value="Palwal">Palwal</option>
-                                    <option  id="city_option" value="Sonipat">Sonipat</option>
+                                    <option  id="city_option" value="Rewari">Rewari</option>
                                     <option  id="city_option" value="Hisar">Hisar</option>
                                     <option  id="city_option" value="Karnal">Karnal</option>
                                     <option  id="city_option" value="Bahadurgarh">Bahadurgarh</option>
                                     <option  id="city_option" value="Fatehabad">Fatehabad</option>
+                                    <option  id="city_option" value="Ambala">Ambala</option>
                                 </select>
                             </div>
                                <!-- city -->
-                             <div class="form-group"><label for="id_query">Describe your Location</label><span class="required-input">*</span><textarea class="form-control" id="id_questioncity" name="question" placeholder="Answer" rows="3" maxlength="5000"></textarea></div>
-                            <div class="form-group"><label for="id_query">Description</label><span class="required-input">*</span><textarea class="form-control" id="id_question" name="question" placeholder="Answer" rows="5" maxlength="5000"></textarea></div>
+                             <div class="form-group"><label for="id_query">Describe your Location</label><span class="required-input">*</span><textarea class="form-control" id="id_questioncity" name="question" placeholder="Please Describe Your location Here , with landmark and other informational details! " rows="3" maxlength="5000"></textarea></div>
+                            <div class="form-group"><label for="id_query">Description</label><span class="required-input">*</span><textarea class="form-control" id="id_question" name="question" placeholder="Please Describe Situational infromation here " rows="5" maxlength="5000"></textarea></div>
                             <!-- resource -->
                             <div class="form-group">
                                 <label for="id_course">Resource:</label><span class="required-input">*(Required)</span>
@@ -294,20 +295,20 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0, 0, 0) 0%, rgb(rgb(1
     var city_index=document.getElementById('id_city').selectedIndex
     var resource_index=document.getElementById('id_resource').selectedIndex
     var require_index=document.getElementById('id_requirement').selectedIndex
-    var resource_element
-    var require_element;
-    for (var option of document.getElementById('id_resource').options)
-    {
-        if (option.selected) {
-            resource_element=option.value
-        }
-    }
-    for (var option of document.getElementById('id_requirement').options)
-    {
-        if (option.selected) {
-            require_element=option.value
-        }
-    }
+    // var resource_element
+    // var require_element;
+    // for (var option of document.getElementById('id_resource').options)
+    // {
+    //     if (option.selected) {
+    //         resource_element=option.value
+    //     }
+    // }
+    // for (var option of document.getElementById('id_requirement').options)
+    // {
+    //     if (option.selected) {
+    //         require_element=option.value
+    //     }
+    // }
 
     console.log(city_index,resource_index,require_index);
         console.log('form submitted');
@@ -316,9 +317,9 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0, 0, 0) 0%, rgb(rgb(1
                 name:document.getElementById("id_name").value,
                 email:document.getElementById('id_email').value,
                 phone:document.getElementById('id_phoneno').value,
-                city:document.getElementsByTagName("option")[city_index].value,
-                resource:resource_element,
-                available_or_required:require_element,
+                city:document.getElementById("id_city")[city_index].value,
+                resource:document.getElementById("id_resource")[resource_index].value,
+                available_or_required:document.getElementById("id_requirement")[require_index].value,
                 description:document.getElementById('id_question').value,
                 descriptioncity:document.getElementById('id_questioncity').value
 
@@ -330,9 +331,9 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(0, 0, 0) 0%, rgb(rgb(1
                 name:document.getElementById("id_name").value,
                 email:document.getElementById('id_email').value,
                 phone:document.getElementById('id_phoneno').value,
-                city:document.getElementsByTagName("option")[city_index].value,
-                resource:resource_element,
-                available_or_required:require_element,
+                city:document.getElementById("id_city")[city_index].value,
+                resource:document.getElementById("id_resource")[resource_index].value,
+                available_or_required:document.getElementById("id_requirement")[require_index].value,
                 description:document.getElementById('id_question').value,
                 descriptioncity:document.getElementById('id_questioncity').value
 
